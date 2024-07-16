@@ -1,0 +1,7 @@
+# Basic Code tesing with python
+
+def function(a,b):
+    print a,b 
+
+apply(function,("Hello","World!"))
+apply(function,(1,2+3))
