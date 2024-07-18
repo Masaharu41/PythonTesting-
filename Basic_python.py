@@ -12,9 +12,11 @@ import os
 print("Welcome to Math")
 print("press q to quit at anytime")
 userop = "0"
+runcounter = 0
 #a = sys.stdin.readline() #Waits for User String
 #print(a) # Reprints the user's string showing completion to the convertion
 while True:
+    runcounter = runcounter + 1
     print ("Enter the first number")
     #take user input from terminal and strip extra space from input
     userinput1 = sys.stdin.readline().strip(
@@ -23,10 +25,9 @@ while True:
     #check user input for q to leave while loop
     if userinput1 == "q":
             break
-    elif userinput1 == "r":
+    elif userinput1 == "r" and runcounter >= 1:
         try:
               #Check that the userinput is an integer
-            int(userinput1)
             print ("Enter the second number")
             userinput2 = sys.stdin.readline().strip(
 
@@ -54,7 +55,7 @@ while True:
                 elif userop == "*":
                     temp = int(usersave) * int(userinput2)
                 elif userop == "/":
-                    temp = (int(usersave) / int(userinput2)) # "The remainder is" + (int(userinput1) % int(userinput2)) 
+                    temp = (int(usersave) / int(userinput2)) 
                 elif userop == "q":
                     break
                 else:
@@ -94,7 +95,7 @@ while True:
                 elif userop == "*":
                     temp = int(userinput1) * int(userinput2)
                 elif userop == "/":
-                    temp = (int(userinput1) / int(userinput2)) # "The remainder is" + (int(userinput1) % int(userinput2)) 
+                    temp = (int(userinput1) / int(userinput2)) 
                 elif userop == "q":
                     break
                 else:
