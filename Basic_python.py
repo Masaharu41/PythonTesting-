@@ -5,7 +5,8 @@
 #{*} Use basic math
 #{*} Allow Multiple calcuations without closing script
 #{*} create a basic calculator script
-#{} create a calculator script that can save the last answer to use on the next iteration
+#{*} create a calculator script that can save the last answer to use on the next iteration
+#{} clean code to make script cleaner
 import sys
 import os
 
@@ -40,6 +41,7 @@ while True:
            break
         else:
             try:
+                userchoice = usersave   
                 int(userinput2)
                 print("Please select operation + for addition - for substration * for multiplicationn / for division or Q to quit" )
                 userop = sys.stdin.readline().strip(
@@ -49,13 +51,13 @@ while True:
                     # Note the input from the terminal is a string data type. must force to integer to proper
                     # compute the operation
                 if userop == "+":
-                    temp = int(usersave) + int(userinput2)
+                    temp = int(userchoice) + int(userinput2)
                 elif userop == "-":
-                    temp = int(usersave) - int(userinput2)
+                    temp = int(userchoice) - int(userinput2)
                 elif userop == "*":
-                    temp = int(usersave) * int(userinput2)
+                    temp = int(userchoice) * int(userinput2)
                 elif userop == "/":
-                    temp = (int(usersave) / int(userinput2)) 
+                    temp = (int(userchoice) / int(userinput2)) 
                 elif userop == "q":
                     break
                 else:
