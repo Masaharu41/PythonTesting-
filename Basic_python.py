@@ -14,6 +14,7 @@ print("Welcome to Math")
 print("press q to quit at anytime")
 userop = "0"
 runcounter = 0
+usersave = 0
 #a = sys.stdin.readline() #Waits for User String
 #print(a) # Reprints the user's string showing completion to the convertion
 while True:
@@ -35,7 +36,7 @@ while True:
             userchoice = int(userinput1)
         except:
             print("Sorry you must enter a valid integer")
-            break
+            
             
     print ("Enter the second number")
     userinput2 = sys.stdin.readline().strip(
