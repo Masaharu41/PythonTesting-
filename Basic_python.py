@@ -7,9 +7,10 @@
 #{*} create a basic calculator script
 #{*} create a calculator script that can save the last answer to use on the next iteration
 #{*} clean code to make script cleaner
+#{} Change from integers to double data format
 import sys
 import os
-
+# in LF EOL "\n" is a carriage return indicator in a string similar to vbnewline
 print("Welcome to Math\npress q to quit at anytime")
 userop = "0"
 runcounter = 0
@@ -30,12 +31,11 @@ while True:
         userchoice = usersave
     else:
         try:
-            int(userinput1)
+            float(userinput1)
               #Check that the userinput is an integer
-            userchoice = int(userinput1)
+            userchoice = float(userinput1)
         except:
-            print("Sorry you must enter a valid integer")
-            
+            print("Sorry you must enter a valid integer")       
     #Read in second user input and complete checks
     print ("Enter the second number")
     userinput2 = sys.stdin.readline().strip("\n") 
@@ -43,22 +43,20 @@ while True:
            break
     else:
             try:
-                int(userinput2)
+                float(userinput2)
                 print("Please select operation + for addition - for substration * for multiplicationn / for division or Q to quit" )
-                userop = sys.stdin.readline().strip(
-
-                    )
+                userop = sys.stdin.readline().strip("\n")
                 print(userop)
                     # Note the input from the terminal is a string data type. must force to integer to properly
                     # compute the operation
                 if userop == "+":
-                    temp = int(userchoice) + int(userinput2)
+                    temp = float(userchoice) + float(userinput2)
                 elif userop == "-":
-                    temp = int(userchoice) - int(userinput2)
+                    temp = float(userchoice) - float(userinput2)
                 elif userop == "*":
-                    temp = int(userchoice) * int(userinput2)
+                    temp = float(userchoice) * float(userinput2)
                 elif userop == "/":
-                    temp = (int(userchoice) / int(userinput2)) 
+                    temp = (float(userchoice) / float(userinput2)) 
                 elif userop == "q":
                     break
                 else:
