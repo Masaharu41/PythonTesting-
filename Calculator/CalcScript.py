@@ -7,7 +7,7 @@
 #{*} create a basic calculator script
 #{*} create a calculator script that can save the last answer to use on the next iteration
 #{*} clean code to make script cleaner
-#{} Change from integers to double data format
+#{*} Change from integers to double data format
 import sys
 import os
 # in LF EOL "\n" is a carriage return indicator in a string similar to vbnewline
@@ -32,7 +32,7 @@ while True:
     else:
         try:
             float(userinput1)
-              #Check that the userinput is an integer
+              #Check that the userinput is an float
             userchoice = float(userinput1)
         except:
             print("Sorry you must enter a valid integer")       
@@ -47,7 +47,7 @@ while True:
                 print("Please select operation + for addition - for substration * for multiplicationn / for division or Q to quit" )
                 userop = sys.stdin.readline().strip("\n")
                 print(userop)
-                    # Note the input from the terminal is a string data type. must force to integer to properly
+                    # Note the input from the terminal is a string data type. must force to float to properly
                     # compute the operation
                 if userop == "+":
                     temp = float(userchoice) + float(userinput2)
